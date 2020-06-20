@@ -13,11 +13,12 @@ void setup()
 
   initProperties();
 
-  // Connect to Arduino IoT Cloud
   ArduinoCloud.begin(ArduinoIoTPreferredConnection);
   
   setDebugMessageLevel(2);
   ArduinoCloud.printDebugInfo();
+
+  //Tet
 }
 
 void loop()

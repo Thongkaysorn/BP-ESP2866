@@ -1,6 +1,4 @@
 #include <NodeAP.h>
-//#include "arduino_secrets.h"
-//#include "thingProperties.h"
 
 extern strSensor SensorVal;
 extern StructAddrConfig AddrConfig;

@@ -11,12 +11,6 @@ void setup()
 {
   Node_AP_Init();
 
-//  initProperties();
-//  ArduinoCloud.begin(ArduinoIoTPreferredConnection);
-  
-//  setDebugMessageLevel(2);
-//  ArduinoCloud.printDebugInfo();
-
 }
 
 void loop()

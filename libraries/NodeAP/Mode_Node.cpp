@@ -32,8 +32,20 @@ void Mode_Process(void)
     break;
 
     case MODE_SCHE:                 //Mode 3
-      SwStatus = Mode_Schedule(NodeConfig.TimeOnSetupSum, NodeConfig.TimeOffSetupSum);
-      SensorVal.SW1 = SwStatus;
+      if(Mode_Schedule(NodeConfig.TimeOnSetupSum, NodeConfig.TimeOffSetupSum) == 1)
+      {
+        LedStatus_flag = 1;
+
+        SwStatus = 1;
+        SensorVal.SW1 = SwStatus;
+      }
+      else
+      {
+        LedStatus_flag = 0;
+
+        SwStatus = 0;
+        SensorVal.SW1 = SwStatus;
+      }
     break;
 
     case MODE_SCHE_LIGHT:           //Mode 4

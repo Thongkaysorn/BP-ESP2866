@@ -4,7 +4,7 @@
 extern uint8_t		Mode_Node;
 
 /*--- Pin board design ---------------------------------------------------*/
-uint8_t		SwPin 			= PIN_D0;
+uint8_t		SwPin 			= 16;
 /*
 uint8_t		ModePin1		= PIN_D6;
 uint8_t		ModePin2		=	PIN_D7;
@@ -52,13 +52,13 @@ strSensor SensorVal;
 
 extern ESP8266WiFiMulti wifiMulti;
 
-/*=== Node AP Initial ================================================================================*/
+/*=== Node AP Initial =======================================================*/
 void Node_AP_Init(void)
 {
 	delay(200);
 	//pinMode(LED_BUILTIN, OUTPUT);
 	pinMode(BOARD_LED, OUTPUT);
-	//PinSetup();
+	PinSetup();
 	Serial.begin(115200);		Serial.println("\n\n\n");
 													Serial.println("----------- Welcome to Node AP -----------");
 													Serial.println(">> Serial port initial         Done");

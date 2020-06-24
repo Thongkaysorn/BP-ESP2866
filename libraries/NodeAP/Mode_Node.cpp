@@ -22,13 +22,37 @@ void Mode_Process(void)
     break;
 
     case MODE_TIMER:                 //Mode 1
-      SwStatus = Mode_Timer(NodeConfig.TimerSetup);
-      SensorVal.SW1 = SwStatus;
+      if(Mode_Timer(NodeConfig.TimerSetup) == 1)
+      {
+        LedStatus_flag = 1;
+
+        SwStatus = 1;
+        SensorVal.SW1 = SwStatus;
+      }
+      else
+      {
+        LedStatus_flag = 0;
+
+        SwStatus = 0;
+        SensorVal.SW1 = SwStatus;
+      }
     break;
 
     case MODE_LIGHT:                //Mode 2
-      SwStatus = Mode_Light(NodeConfig.LuxSetup);
-      SensorVal.SW1 = SwStatus;
+      if(Mode_Light(NodeConfig.LuxSetup) == 1)
+      {
+        LedStatus_flag = 1;
+
+        SwStatus = 1;
+        SensorVal.SW1 = SwStatus;
+      }
+      else
+      {
+        LedStatus_flag = 0;
+
+        SwStatus = 0;
+        SensorVal.SW1 = SwStatus;
+      }
     break;
 
     case MODE_SCHE:                 //Mode 3

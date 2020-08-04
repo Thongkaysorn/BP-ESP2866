@@ -88,6 +88,7 @@ void Node_AP_Init(void)
 
 	delay(50);
 
+
 	UrlPacking_log();
 	UrlPacking_ReadNode();
 

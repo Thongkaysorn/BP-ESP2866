@@ -23,7 +23,7 @@ bool WifiInit(void)
 
 		wifiMulti.addAP("BANN_PLOII", "Ploii79318");
   	wifiMulti.addAP("APRT", "AstonmartinDB9");
-  	wifiMulti.addAP("EM-APRT", "Astonmartin");
+  	wifiMulti.addAP("BaanPloyK12", "Ploii087");
 		wifiMulti.addAP("phareuhas2G_", "27092522");
 
     // Static IP details...

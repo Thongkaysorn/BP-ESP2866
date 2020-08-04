@@ -12,7 +12,7 @@ String StringTemp = "";
 void LoadNodeConfig()
 {
 	/*--- First write EEPROM before record config --------------------------*/
-	//FirstEEPROMwrite();
+	FirstEEPROMwrite();
 
 	NodeConfig.NodeId		= EEPROM.read(AddrConfig.NodeId);
 	NodeConfig.NodeMode = EEPROM.read(AddrConfig.NodeMode);
